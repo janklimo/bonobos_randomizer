@@ -38,14 +38,15 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'tzinfo'
 
+gem 'nokogiri', '~> 1.6.3.rc1'
+
 
 group :development do
   gem 'sqlite3', '1.3.8'
-  gem 'nokogiri', '~> 1.6.3.rc1'
+  
 end
 
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'nokogiri'
 end
