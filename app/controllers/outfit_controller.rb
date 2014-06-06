@@ -21,18 +21,21 @@ class OutfitController < ApplicationController
    
    populate_arrays
 
-   first = Outfit.new()
-   first.shirt = "http://www.bonobos.com/bright-blue-gingham-spread-collar-dress-shirt-for-men"
-   first.blazer = "http://www.bonobos.com/indigo-blue-italian-linen-herringbone-blazer-for-men"
-   first.tie = "http://www.bonobos.com/americano-necktie-in-seafoam-foulard"
-   first.pocket_square ="http://www.bonobos.com/cotton-blue-gingham-pocket-square-for-men"
-   first.belt = "http://www.bonobos.com/blue-silk-foulard-belts-for-men"
-   first.pants = "http://www.bonobos.com/austin-asphalt-grey-travel-jeans-for-men"
-   first.bag = "http://www.bonobos.com/billykirk-schoolboy-satchel-tan"
-   first.socks = "http://www.bonobos.com/spots-and-zig-zags-corgi-dress-socks-for-men"
-   first.shoes = "http://www.bonobos.com/navy-del-toro-prince-albert-slipper-for-men"
 
-   first.save
+   if !Outfit.find(1).exists? 
+    first = Outfit.new()
+    first.shirt = "http://www.bonobos.com/bright-blue-gingham-spread-collar-dress-shirt-for-men"
+    first.blazer = "http://www.bonobos.com/indigo-blue-italian-linen-herringbone-blazer-for-men"
+    first.tie = "http://www.bonobos.com/americano-necktie-in-seafoam-foulard"
+    first.pocket_square ="http://www.bonobos.com/cotton-blue-gingham-pocket-square-for-men"
+    first.belt = "http://www.bonobos.com/blue-silk-foulard-belts-for-men"
+    first.pants = "http://www.bonobos.com/austin-asphalt-grey-travel-jeans-for-men"
+    first.bag = "http://www.bonobos.com/billykirk-schoolboy-satchel-tan"
+    first.socks = "http://www.bonobos.com/spots-and-zig-zags-corgi-dress-socks-for-men"
+    first.shoes = "http://www.bonobos.com/navy-del-toro-prince-albert-slipper-for-men"
+
+    first.save
+  end
 
   end
 
