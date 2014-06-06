@@ -22,7 +22,7 @@ class OutfitController < ApplicationController
    populate_arrays
 
 
-   if !Outfit.find(1).exists? 
+   if !Outfit.exists?(1) 
     first = Outfit.new()
     first.shirt = "http://www.bonobos.com/bright-blue-gingham-spread-collar-dress-shirt-for-men"
     first.blazer = "http://www.bonobos.com/indigo-blue-italian-linen-herringbone-blazer-for-men"
