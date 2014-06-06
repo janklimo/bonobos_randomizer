@@ -1,0 +1,38 @@
+<h1>Bonobos Outfit Randomizer</h1>
+<p><b>Smart Casual</b></p>
+
+<p>Total outfit cost: <b>$<%= @outfit[:shirt][1] + @outfit[:blazer][1] + @outfit[:tie][1] + @outfit[:pocket_square][1] %></b>.</p>
+
+<div style="display: block; width: 200px; height: 500px; float: left; margin: 20px;" class="item">
+	<a href="<%= @outfit[:blazer][2] %>" target="_blank" title="<%= @outfit[:blazer][0] %>"><br />
+		<img src="<%= @outfit[:blazer][3] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
+	</a>
+	<p style="text-align: center;"><%= @outfit[:blazer][0] %> </p>
+	<p style="text-align: center; font-weight: bold;">$<%= @outfit[:blazer][1] %></p>
+</div>
+
+<div style="display: block; width: 200px; height: 500px; float: left; margin: 20px;" class="item">
+	<a href="<%= @outfit[:shirt][2] %>" target="_blank" title="<%= @outfit[:shirt][0] %>"><br />
+		<img src="<%= @outfit[:shirt][3] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
+	</a>
+	<p style="text-align: center;"><%= @outfit[:shirt][0] %> </p>
+	<p style="text-align: center; font-weight: bold;">$<%= @outfit[:shirt][1] %></p>
+</div>
+
+<div style="display: block; width: 200px; height: 500px; float: left; margin: 20px;" class="item">
+	<a href="<%= @outfit[:tie][2] %>" target="_blank" title="<%= @outfit[:tie][0] %>"><br />
+		<img src="<%= @outfit[:tie][3] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
+	</a>
+	<p style="text-align: center;"><%= @outfit[:tie][0] %> </p>
+	<p style="text-align: center; font-weight: bold;">$<%= @outfit[:tie][1] %></p>
+</div>
+
+<div style="display: block; width: 200px; height: 500px; float: left; margin: 20px;" class="item">
+	<a href="<%= @outfit[:pocket_square][2] %>" target="_blank" title="<%= @outfit[:pocket_square][0] %>"><br />
+		<img src="<%= @outfit[:pocket_square][3] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
+	</a>
+	<p style="text-align: center;"><%= @outfit[:pocket_square][0] %> </p>
+	<p style="text-align: center; font-weight: bold;">$<%= @outfit[:pocket_square][1] %></p>
+</div>
+
+<%= @random_wtf %>
