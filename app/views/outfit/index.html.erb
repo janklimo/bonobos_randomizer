@@ -1,12 +1,21 @@
 <h1>Bonobos Outfit App</h1>
 <p>A place where you can easily put together your own unique Bonobos outfits and share them with friends.</p>
 
-<p>Check out the latest submitted outfit:</p>
+<p>Check out the latest submitted outfits:</p>
 
-<%= render(:partial => "view_outfit", :locals => {:outfit => @last_outfit, :more_links => false}) %>
+<div style="width:100%;text-align: center;">
+	<div id="slider">
+		<% @last_outfits.each do |last_outfit| %>
+			<div>
+				<%= render(:partial => "view_outfit", :locals => {:outfit => last_outfit, :more_links => false}) %>
+			</div>
+		<% end %>
+	</div>
+</div>
 
-<p>Looking cool, right? Easily build your own! Start by choosing a setting:</p>
-
+<div>
+	<p>Looking cool, right? Click to generate your own now:</p>
+</div>
 <%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
   	  
 	<%= render(:partial => "form", :locals => {:f => f}) %>

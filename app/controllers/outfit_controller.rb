@@ -11,7 +11,8 @@ class OutfitController < ApplicationController
     populate_arrays
 
     # load the last outfit to show on homepage
-    @last_outfit = Outfit.last
+    #@last_outfit = Outfit.last
+    @last_outfits = Outfit.last(5).reverse
 
     # if no outfits exist, create one so it's displayed at homepage
     if !Outfit.exists?(1) 
