@@ -6,36 +6,31 @@ require 'nokogiri'
 
 class OutfitController < ApplicationController
 
-	  # states:
-    # 1. load homepage: 
-    #   - load last outfit from DB
-    #   - click to generate new from arrays
-    # 2. load outfit:
-    #   - load outfit by ID from DB
-    #   - Shuffle - generate new from arrays
-    #   - Change 1 - save to DB and change one from arrays
-    #   - Zoom - load more pics via HTML scrape
-    #   - Save and share - save to DB
-
   def index
    
-   populate_arrays
+    populate_arrays
 
+    # load the last outfit to show on homepage
+    @last_outfit = Outfit.last
 
-   if !Outfit.exists?(1) 
-    first = Outfit.new()
-    first.shirt = "http://www.bonobos.com/bright-blue-gingham-spread-collar-dress-shirt-for-men"
-    first.blazer = "http://www.bonobos.com/indigo-blue-italian-linen-herringbone-blazer-for-men"
-    first.tie = "http://www.bonobos.com/americano-necktie-in-seafoam-foulard"
-    first.pocket_square ="http://www.bonobos.com/cotton-blue-gingham-pocket-square-for-men"
-    first.belt = "http://www.bonobos.com/blue-silk-foulard-belts-for-men"
-    first.pants = "http://www.bonobos.com/austin-asphalt-grey-travel-jeans-for-men"
-    first.bag = "http://www.bonobos.com/billykirk-schoolboy-satchel-tan"
-    first.socks = "http://www.bonobos.com/spots-and-zig-zags-corgi-dress-socks-for-men"
-    first.shoes = "http://www.bonobos.com/navy-del-toro-prince-albert-slipper-for-men"
+    # if no outfits exist, create one so it's displayed at homepage
+    if !Outfit.exists?(1) 
+      first = Outfit.new()
+      first.shirt = "http://www.bonobos.com/bright-blue-gingham-spread-collar-dress-shirt-for-men"
+      first.blazer = "http://www.bonobos.com/indigo-blue-italian-linen-herringbone-blazer-for-men"
+      first.tie = "http://www.bonobos.com/americano-necktie-in-seafoam-foulard"
+      first.pocket_square ="http://www.bonobos.com/cotton-blue-gingham-pocket-square-for-men"
+      first.belt = "http://www.bonobos.com/blue-silk-foulard-belts-for-men"
+      first.pants = "http://www.bonobos.com/austin-asphalt-grey-travel-jeans-for-men"
+      first.bag = "http://www.bonobos.com/billykirk-schoolboy-satchel-tan"
+      first.socks = "http://www.bonobos.com/spots-and-zig-zags-corgi-dress-socks-for-men"
+      first.shoes = "http://www.bonobos.com/navy-del-toro-prince-albert-slipper-for-men"
 
-    first.save
+      first.save
+    end
   end
+
+  def home
 
   end
 
@@ -63,6 +58,7 @@ class OutfitController < ApplicationController
     #load JSON and process
     populate_arrays
 
+    # check for outfit ID. If none provided, render index
     if params[:id].to_i > 0
       @outfit = Outfit.find(params[:id])
     else 
@@ -72,6 +68,7 @@ class OutfitController < ApplicationController
     #returns e.g. 'blazer'
     load_item = params['more']
 
+    # prevent error when non-existing column name is provided
     if load_item == 'blazer' || load_item == 'shirt' || load_item == 'tie' || load_item == 'pocket_square' || load_item == 'belt' || load_item == 'pants' || load_item == 'bag' || load_item == 'socks' || load_item == 'shoes'
       item_url = @outfit[load_item]
       doc = Nokogiri::HTML(open(item_url))
@@ -248,6 +245,7 @@ private
         end
       end
 
+    # initiate random ID for outfits to use in the submit form
     @random_shirt = rand(@shirts_names_array.count)
     @random_blazer = rand(@blazers_names_array.count)
     @random_tie = rand(@ties_names_array.count)
@@ -257,8 +255,6 @@ private
     @random_bag = rand(@bags_names_array.count)
     @random_socks = rand(@socks_names_array.count)
     @random_shoes = rand(@shoes_names_array.count)
-
-    @last_outfit = Outfit.last
 
   end
 end

@@ -1,98 +1,7 @@
 <h1>Bonobos Outfit Randomizer</h1>
 <p>A place where you can easily put together your own unique Bonobos outfits and share them with friends.</p>
 
-	<% shirt_id = @shirts_links_array.index(@outfit['shirt']) %>
-	<% blazer_id = @blazers_links_array.index(@outfit['blazer']) %>
-	<% tie_id = @ties_links_array.index(@outfit['tie']) %>
-	<% ps_id = @ps_links_array.index(@outfit['pocket_square']) %>
-	<% belt_id = @belts_links_array.index(@outfit['belt']) %>
-	<% pants_id = @pants_links_array.index(@outfit['pants']) %>
-	<% bag_id = @bags_links_array.index(@outfit['bag']) %>
-	<% socks_id = @socks_links_array.index(@outfit['socks']) %>
-	<% shoes_id = @shoes_links_array.index(@outfit['shoes']) %>
-
-	<div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-		<a href="<%= @blazers_links_array[blazer_id] %>" target="_blank" title="<%= @blazers_names_array[blazer_id] %>"><br />
-			<img src="<%= @blazers_thumbnails_array[blazer_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
-		</a>
-		<p style="text-align: center;"><%= @blazers_names_array[blazer_id] %> </p>
-		<p style="text-align: center; font-weight: bold;">$<%= @blazers_prices_array[blazer_id] %></p>
-		<p style="text-align: center;"><a href="/outfit/view/<%= @outfit['id'].to_s + '?more=blazer' %>" onclick="window.location.href = '/outfit/view/<%= @outfit['id'].to_s + '?more=blazer' %>'">Load more images</a></p>
-	</div>
-
-	<div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-		<a href="<%= @shirts_links_array[shirt_id] %>" target="_blank" title="<%= @shirts_names_array[shirt_id] %>"><br />
-			<img src="<%= @shirts_thumbnails_array[shirt_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
-		</a>
-		<p style="text-align: center;"><%= @shirts_names_array[shirt_id] %> </p>
-		<p style="text-align: center; font-weight: bold;">$<%= @shirts_prices_array[shirt_id] %></p>
-		<p style="text-align: center;"><a href="/outfit/view/<%= @outfit['id'].to_s + '?more=shirt' %>" onclick="window.location.href = '/outfit/view/<%= @outfit['id'].to_s + '?more=shirt' %>'">Load more images</a></p>
-	</div>
-	
-	<div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-		<a href="<%= @pants_links_array[pants_id] %>" target="_blank" title="<%= @pants_names_array[pants_id] %>"><br />
-			<img src="<%= @pants_thumbnails_array[pants_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
-		</a>
-		<p style="text-align: center;"><%= @pants_names_array[pants_id] %> </p>
-		<p style="text-align: center; font-weight: bold;">$<%= @pants_prices_array[pants_id] %></p>
-		<p style="text-align: center;"><a href="/outfit/view/<%= @outfit['id'].to_s + '?more=pants' %>" onclick="window.location.href = '/outfit/view/<%= @outfit['id'].to_s + '?more=pants' %>'">Load more images</a></p>
-	</div>
-
-
-	<div style="display: block; width: 200px; float: left; margin: 20px; clear:both;" class="item">
-		<a href="<%= @ps_links_array[ps_id] %>" target="_blank" title="<%= @ps_names_array[ps_id] %>"><br />
-			<img src="<%= @ps_thumbnails_array[ps_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
-		</a>
-		<p style="text-align: center;"><%= @ps_names_array[ps_id] %> </p>
-		<p style="text-align: center; font-weight: bold;">$<%= @ps_prices_array[ps_id] %></p>
-		<p style="text-align: center;"><a href="/outfit/view/<%= @outfit['id'].to_s + '?more=pocket_square' %>" onclick="window.location.href = '/outfit/view/<%= @outfit['id'].to_s + '?more=pocket_square' %>'">Load more images</a></p>
-	</div>
-
-	<div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-		<a href="<%= @ties_links_array[tie_id] %>" target="_blank" title="<%= @ties_names_array[tie_id] %>"><br />
-			<img src="<%= @ties_thumbnails_array[tie_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;" >
-		</a>
-		<p style="text-align: center;"><%= @ties_names_array[tie_id] %> </p>
-		<p style="text-align: center; font-weight: bold;">$<%= @ties_prices_array[tie_id] %></p>
-		<p style="text-align: center;"><a href="/outfit/view/<%= @outfit['id'].to_s + '?more=tie' %>" onclick="window.location.href = '/outfit/view/<%= @outfit['id'].to_s + '?more=tie' %>'">Load more images</a></p>
-	</div>
-
-	<div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-		<a href="<%= @belts_links_array[belt_id] %>" target="_blank" title="<%= @belts_names_array[belt_id] %>"><br />
-			<img src="<%= @belts_thumbnails_array[belt_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
-		</a>
-		<p style="text-align: center;"><%= @belts_names_array[belt_id] %> </p>
-		<p style="text-align: center; font-weight: bold;">$<%= @belts_prices_array[belt_id] %></p>
-		<p style="text-align: center;"><a href="/outfit/view/<%= @outfit['id'].to_s + '?more=belt' %>" onclick="window.location.href = '/outfit/view/<%= @outfit['id'].to_s + '?more=belt' %>'">Load more images</a></p>
-	</div>
-
-	<div style="display: block; width: 200px; float: left; margin: 20px; clear: both;" class="item">
-		<a href="<%= @bags_links_array[bag_id] %>" target="_blank" title="<%= @bags_names_array[bag_id] %>"><br />
-			<img src="<%= @bags_thumbnails_array[bag_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
-		</a>
-		<p style="text-align: center;"><%= @bags_names_array[bag_id] %> </p>
-		<p style="text-align: center; font-weight: bold;">$<%= @bags_prices_array[bag_id] %></p>
-		<p style="text-align: center;"><a href="/outfit/view/<%= @outfit['id'].to_s + '?more=bag' %>" onclick="window.location.href = '/outfit/view/<%= @outfit['id'].to_s + '?more=bag' %>'">Load more images</a></p>
-	</div>
-
-	<div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-		<a href="<%= @socks_links_array[socks_id] %>" target="_blank" title="<%= @socks_names_array[socks_id] %>"><br />
-			<img src="<%= @socks_thumbnails_array[socks_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
-		</a>
-		<p style="text-align: center;"><%= @socks_names_array[socks_id] %> </p>
-		<p style="text-align: center; font-weight: bold;">$<%= @socks_prices_array[socks_id] %></p>
-		<p style="text-align: center;"><a href="/outfit/view/<%= @outfit['id'].to_s + '?more=socks' %>" onclick="window.location.href = '/outfit/view/<%= @outfit['id'].to_s + '?more=socks' %>'">Load more images</a></p>
-	</div>
-
-	<div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-		<a href="<%= @shoes_links_array[shoes_id] %>" target="_blank" title="<%= @shoes_names_array[shoes_id] %>"><br />
-			<img src="<%= @shoes_thumbnails_array[shoes_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
-		</a>
-		<p style="text-align: center;"><%= @shoes_names_array[shoes_id] %> </p>
-		<p style="text-align: center; font-weight: bold;">$<%= @shoes_prices_array[shoes_id] %></p>
-		<p style="text-align: center;"><a href="/outfit/view/<%= @outfit['id'].to_s + '?more=shoes' %>" onclick="window.location.href = '/outfit/view/<%= @outfit['id'].to_s + '?more=shoes' %>'">Load more images</a></p>
-	</div>
-	<div style="clear: both;"></div>
+<%= render(:partial => "view_outfit", :locals => {:outfit => @outfit, :more_links => true}) %>
 
 <% if !@further_images.nil? %>	
 
@@ -113,15 +22,7 @@
 
 	<%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
   	  
-		<%= f.hidden_field(:shirt, :value => @shirts_links_array[@random_shirt]) %>
-		<%= f.hidden_field(:blazer, :value => @blazers_links_array[@random_blazer]) %>
-		<%= f.hidden_field(:tie, :value => @ties_links_array[@random_tie]) %>
-		<%= f.hidden_field(:pocket_square, :value => @ps_links_array[@random_ps]) %>
-		<%= f.hidden_field(:belt, :value => @belts_links_array[@random_belt]) %>
-		<%= f.hidden_field(:pants, :value => @pants_links_array[@random_pants]) %>
-		<%= f.hidden_field(:bag, :value => @bags_links_array[@random_bag]) %>
-		<%= f.hidden_field(:socks, :value => @socks_links_array[@random_socks]) %>
-		<%= f.hidden_field(:shoes, :value => @shoes_links_array[@random_shoes]) %>
+		<%= render(:partial => "form", :locals => {:f => f}) %>
 
     <div class="form-buttons">
       <%= submit_tag("New Outfit") %>
