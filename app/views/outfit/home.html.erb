@@ -1,0 +1,12 @@
+<div id="display_ajax">
+     <p>Please wait Bonobos Outfit App loads.</p>
+     <p><%= image_tag("ajax-loader.gif") %></p>
+</div>
+
+<div id="loaded_index"></div>
+
+<script type="text/javascript"> 
+  $("#loaded_index").load("/outfit/index", function() {
+  	$("#display_ajax").hide();
+	});
+</script>
