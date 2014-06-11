@@ -150,7 +150,7 @@ hr.style-one {
 }
 
 #section3 {
-	background-image: asset-url('bright_squares.png');
+	background-image: image_path('bright_squares.png');
 }
 
 #section3 #header {
