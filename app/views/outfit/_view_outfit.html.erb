@@ -8,105 +8,105 @@
   <% socks_id = @socks_links_array.index(outfit['socks']) %>
   <% shoes_id = @shoes_links_array.index(outfit['shoes']) %>
 
-  <div style="width: 900px ; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
-    <div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-      <a href="<%= @blazers_links_array[blazer_id] %>" target="_blank" title="<%= @blazers_names_array[blazer_id] %>"><br />
-        <img src="<%= @blazers_thumbnails_array[blazer_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
+  <div id="wrapper">
+    
+    <div class="item" style="margin-left: 85px;">
+      <a href="<%= @blazers_links_array[blazer_id] %>" target="_blank">
+        <img src="<%= @blazers_thumbnails_array[blazer_id] %>" alt="Blazer" style="height: 280px; vertical-align: bottom;" title="<%= @blazers_names_array[blazer_id] %>" onmouseover="$('.item_type').text($(this).attr('alt')); $('.item_name').text($(this).attr('title') + ' ($<%= @blazers_prices_array[blazer_id] %>)');" onmouseout="$('.item_type').text(' '); $('.item_name').text(' ');">
       </a>
-      <p style="text-align: center;"><%= @blazers_names_array[blazer_id] %> </p>
-      <p style="text-align: center; font-weight: bold;">$<%= @blazers_prices_array[blazer_id] %></p>
       <% if more_links == true %>
-        <p style="text-align: center;"><a href="/outfit/view/<%= outfit['id'].to_s + '?more=blazer' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=blazer' %>'">Load more images</a></p>
+        <div class="overlay">
+          <a href="/outfit/view/<%= outfit['id'].to_s + '?more=blazer' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=blazer' %>'" class="overlay-link">More images</a>
+        </div>
       <% end %>
     </div>
 
-    <div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-      <a href="<%= @shirts_links_array[shirt_id] %>" target="_blank" title="<%= @shirts_names_array[shirt_id] %>"><br />
-        <img src="<%= @shirts_thumbnails_array[shirt_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
+    <div class="item">
+      <a href="<%= @shirts_links_array[shirt_id] %>" target="_blank">
+        <img src="<%= @shirts_thumbnails_array[shirt_id] %>" alt="Shirt" title="<%= @shirts_names_array[shirt_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 280px; vertical-align: bottom;" onmouseover="$('.item_type').text($(this).attr('alt')); $('.item_name').text($(this).attr('title') + ' ($<%= @shirts_prices_array[shirt_id] %>)');" onmouseout="$('.item_type').text(' '); $('.item_name').text(' ');">
       </a>
-      <p style="text-align: center;"><%= @shirts_names_array[shirt_id] %> </p>
-      <p style="text-align: center; font-weight: bold;">$<%= @shirts_prices_array[shirt_id] %></p>
       <% if more_links == true %>
-        <p style="text-align: center;"><a href="/outfit/view/<%= outfit['id'].to_s + '?more=shirt' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=shirt' %>'">Load more images</a></p>
+        <div class="overlay">
+          <a href="/outfit/view/<%= outfit['id'].to_s + '?more=shirt' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=shirt' %>'" class="overlay-link">More images</a>
+        </div>
       <% end %>
     </div>
 
-    <div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-      <a href="<%= @pants_links_array[pants_id] %>" target="_blank" title="<%= @pants_names_array[pants_id] %>"><br />
-        <img src="<%= @pants_thumbnails_array[pants_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
+    <div class="item">
+      <a href="<%= @pants_links_array[pants_id] %>" target="_blank">
+          <img src="<%= @pants_thumbnails_array[pants_id] %>" alt="Pants" title="<%= @pants_names_array[pants_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 280px; vertical-align: bottom;" onmouseover="$('.item_type').text($(this).attr('alt')); $('.item_name').text($(this).attr('title') + ' ($<%= @pants_prices_array[pants_id] %>)');" onmouseout="$('.item_type').text(' '); $('.item_name').text(' ');">
       </a>
-      <p style="text-align: center;"><%= @pants_names_array[pants_id] %> </p>
-      <p style="text-align: center; font-weight: bold;">$<%= @pants_prices_array[pants_id] %></p>
       <% if more_links == true %>
-        <p style="text-align: center;"><a href="/outfit/view/<%= outfit['id'].to_s + '?more=pants' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=pants' %>'">Load more images</a></p>
+        <div class="overlay">
+          <a href="/outfit/view/<%= outfit['id'].to_s + '?more=pants' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=pants' %>'" class="overlay-link">More images</a>
+        </div>
       <% end %>
     </div>
 
-    <div style="display: block; width: 200px; float: left; margin: 20px; clear: both;" class="item">
-      <a href="<%= @ps_links_array[ps_id] %>" target="_blank" title="<%= @ps_names_array[ps_id] %>"><br />
-        <img src="<%= @ps_thumbnails_array[ps_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
+    <div class="item">
+      <a href="<%= @shoes_links_array[shoes_id] %>" target="_blank">
+        <img src="<%= @shoes_thumbnails_array[shoes_id] %>" alt="Shoes" title="<%= @shoes_names_array[shoes_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 280px; vertical-align: bottom;" onmouseover="$('.item_type').text($(this).attr('alt')); $('.item_name').text($(this).attr('title') + ' ($<%= @shoes_prices_array[shoes_id] %>)');" onmouseout="$('.item_type').text(' '); $('.item_name').text(' ');">
       </a>
-      <p style="text-align: center;"><%= @ps_names_array[ps_id] %> </p>
-      <p style="text-align: center; font-weight: bold;">$<%= @ps_prices_array[ps_id] %></p>
       <% if more_links == true %>
-        <p style="text-align: center;"><a href="/outfit/view/<%= outfit['id'].to_s + '?more=pocket_square' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=pocket_square' %>'">Load more images</a></p>
+        <div class="overlay">
+          <a href="/outfit/view/<%= outfit['id'].to_s + '?more=shoes' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=shoes' %>'" class="overlay-link">More images</a>
+        </div>
       <% end %>
     </div>
 
-    <div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-      <a href="<%= @ties_links_array[tie_id] %>" target="_blank" title="<%= @ties_names_array[tie_id] %>"><br />
-        <img src="<%= @ties_thumbnails_array[tie_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
+    <div class="item" style="clear:both;">
+      <a href="<%= @ps_links_array[ps_id] %>" target="_blank">
+        <img src="<%= @ps_thumbnails_array[ps_id] %>" alt="Pocket square" title="<%= @ps_names_array[ps_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px; vertical-align: bottom;" onmouseover="$('.item_type').text($(this).attr('alt')); $('.item_name').text($(this).attr('title') + ' ($<%= @ps_prices_array[ps_id] %>)');" onmouseout="$('.item_type').text(' '); $('.item_name').text(' ');">
       </a>
-      <p style="text-align: center;"><%= @ties_names_array[tie_id] %> </p>
-      <p style="text-align: center; font-weight: bold;">$<%= @ties_prices_array[tie_id] %></p>
       <% if more_links == true %>
-        <p style="text-align: center;"><a href="/outfit/view/<%= outfit['id'].to_s + '?more=tie' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=tie' %>'">Load more images</a></p>
+        <div class="overlay">
+          <a href="/outfit/view/<%= outfit['id'].to_s + '?more=pocket_square' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=pocket_square' %>'" class="overlay-link">More images</a>
+        </div>
       <% end %>
     </div>
 
-    <div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-      <a href="<%= @belts_links_array[belt_id] %>" target="_blank" title="<%= @belts_names_array[belt_id] %>"><br />
-        <img src="<%= @belts_thumbnails_array[belt_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
+    <div class="item">
+      <a href="<%= @ties_links_array[tie_id] %>" target="_blank">
+        <img src="<%= @ties_thumbnails_array[tie_id] %>" alt="Tie" title="<%= @ties_names_array[tie_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px; vertical-align: bottom;" onmouseover="$('.item_type').text($(this).attr('alt')); $('.item_name').text($(this).attr('title') + ' ($<%= @ties_prices_array[tie_id] %>)');" onmouseout="$('.item_type').text(' '); $('.item_name').text(' ');">
       </a>
-      <p style="text-align: center;"><%= @belts_names_array[belt_id] %> </p>
-      <p style="text-align: center; font-weight: bold;">$<%= @belts_prices_array[belt_id] %></p>
       <% if more_links == true %>
-        <p style="text-align: center;"><a href="/outfit/view/<%= outfit['id'].to_s + '?more=belt' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=belt' %>'">Load more images</a></p>
+        <div class="overlay">
+          <a href="/outfit/view/<%= outfit['id'].to_s + '?more=tie' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=tie' %>'" class="overlay-link">More images</a>
+        </div>
       <% end %>
     </div>
 
-    <div style="display: block; width: 200px; float: left; margin: 20px; clear: both;" class="item">
-      <a href="<%= @bags_links_array[bag_id] %>" target="_blank" title="<%= @bags_names_array[bag_id] %>"><br />
-        <img src="<%= @bags_thumbnails_array[bag_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
+    <div class="item">
+      <a href="<%= @socks_links_array[socks_id] %>" target="_blank">
+        <img src="<%= @socks_thumbnails_array[socks_id] %>" alt="Socks" title="<%= @socks_names_array[socks_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px; vertical-align: bottom;" onmouseover="$('.item_type').text($(this).attr('alt')); $('.item_name').text($(this).attr('title') + ' ($<%= @socks_prices_array[socks_id] %>)');" onmouseout="$('.item_type').text(' '); $('.item_name').text(' ');">
       </a>
-      <p style="text-align: center;"><%= @bags_names_array[bag_id] %> </p>
-      <p style="text-align: center; font-weight: bold;">$<%= @bags_prices_array[bag_id] %></p>
       <% if more_links == true %>
-        <p style="text-align: center;"><a href="/outfit/view/<%= outfit['id'].to_s + '?more=bag' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=bag' %>'">Load more images</a></p>
+        <div class="overlay">
+          <a href="/outfit/view/<%= outfit['id'].to_s + '?more=socks' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=socks' %>'" class="overlay-link">More images</a>
+        </div>
       <% end %>
     </div>
 
-    <div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-      <a href="<%= @socks_links_array[socks_id] %>" target="_blank" title="<%= @socks_names_array[socks_id] %>"><br />
-        <img src="<%= @socks_thumbnails_array[socks_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
+    <div class="item">
+      <a href="<%= @belts_links_array[belt_id] %>" target="_blank">
+        <img src="<%= @belts_thumbnails_array[belt_id] %>" alt="Belt" title="<%= @belts_names_array[belt_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px; vertical-align: bottom;" onmouseover="$('.item_type').text($(this).attr('alt')); $('.item_name').text($(this).attr('title') + ' ($<%= @belts_prices_array[belt_id] %>)');" onmouseout="$('.item_type').text(' '); $('.item_name').text(' ');">
       </a>
-      <p style="text-align: center;"><%= @socks_names_array[socks_id] %> </p>
-      <p style="text-align: center; font-weight: bold;">$<%= @socks_prices_array[socks_id] %></p>
       <% if more_links == true %>
-        <p style="text-align: center;"><a href="/outfit/view/<%= outfit['id'].to_s + '?more=socks' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=socks' %>'">Load more images</a></p>
+        <div class="overlay">
+          <a href="/outfit/view/<%= outfit['id'].to_s + '?more=belt' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=belt' %>'" class="overlay-link">More images</a>
+        </div>
       <% end %>
     </div>
 
-    <div style="display: block; width: 200px; float: left; margin: 20px;" class="item">
-      <a href="<%= @shoes_links_array[shoes_id] %>" target="_blank" title="<%= @shoes_names_array[shoes_id] %>"><br />
-        <img src="<%= @shoes_thumbnails_array[shoes_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px;">
+    <div class="item">
+      <a href="<%= @bags_links_array[bag_id] %>" target="_blank">
+        <img src="<%= @bags_thumbnails_array[bag_id] %>" alt="Bag" title="<%= @bags_names_array[bag_id] %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 200px; vertical-align: bottom;" onmouseover="$('.item_type').text($(this).attr('alt')); $('.item_name').text($(this).attr('title') + ' ($<%= @bags_prices_array[bag_id] %>)');" onmouseout="$('.item_type').text(' '); $('.item_name').text(' ');">
       </a>
-      <p style="text-align: center;"><%= @shoes_names_array[shoes_id] %> </p>
-      <p style="text-align: center; font-weight: bold;">$<%= @shoes_prices_array[shoes_id] %></p>
       <% if more_links == true %>
-        <p style="text-align: center;"><a href="/outfit/view/<%= outfit['id'].to_s + '?more=shoes' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=shoes' %>'">Load more images</a></p>
+        <div class="overlay">
+          <a href="/outfit/view/<%= outfit['id'].to_s + '?more=bag' %>" onclick="window.location.href = '/outfit/view/<%= outfit['id'].to_s + '?more=bag' %>'" class="overlay-link">More images</a>
+        </div>
       <% end %>
     </div>
+
   </div>
-
-<div style="clear:both;"></div>

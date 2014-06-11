@@ -1,27 +1,61 @@
-<h1>Bonobos Outfit App</h1>
-<p>A place where you can easily put together your own unique Bonobos outfits and share them with friends.</p>
+<div id="fullpage">
+    <div class="section" id="section1">
+    	<div id="home-rectangle">
+    		<%= image_tag("bonobos_logo.png", :alt => "header_logo", :class => "header_logo") %>
+    		<hr class="style-one">
+    		<h2>Outfit Randomizer</h2>
+    		<h3>Create new Bonobos outfits with a single click. <br /> Get inspired. <br />Easily share your creations with your friends!</h3>
+    	</div>
 
-<p>Check out the latest submitted outfits:</p>
+			<button class="button-outfits" onclick="$.fn.fullpage.moveSectionDown();">Latest Outfits</button>
+			<button class="button-about" onclick="$.fn.fullpage.moveTo(3, 0);">About Me</button>
 
-<div style="width:100%;text-align: center;">
-	<div id="slider">
-		<% @last_outfits.each do |last_outfit| %>
-			<div>
-				<%= render(:partial => "view_outfit", :locals => {:outfit => last_outfit, :more_links => false}) %>
-			</div>
-		<% end %>
-	</div>
+    </div>
+    
+    <div class="section" id="section2">
+
+    	<div class="ribbon">
+    	</div>
+
+    	<h2 class="item_type">&nbsp;</h2>
+    	<h3 class="item_name">&nbsp;</h3>
+		
+			<% @last_outfits.each do |last_outfit| %>
+				<div class="slide">
+					<%= render(:partial => "view_outfit", :locals => {:outfit => last_outfit, :more_links => true}) %>
+				</div>
+			<% end %>
+
+    </div>
+
+
+		<div class="section" id="section3">
+    		<div class="ribbon">
+    		</div>
+
+    		<div id="header">
+    			<%= image_tag("about_image.png", :alt => "about_image", :class => "about-image") %>
+    		</div>
+
+    		<hr class="style-one">
+    		<h2>Hey there!</h2>
+    		<h3>My name is Jan. <br />
+    		I have an extensive background in business (project management, business development), importantly from fashion retail. <br />
+    		I fell in love with Ruby on Rails a couple of months ago.<br />
+    		At Bonobos I'd like to develop my skills and passion for coding.</h3>
+  
+
+				<%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
+	  	  	<%= render(:partial => "form", :locals => {:f => f}) %>
+
+				  <div class="form-buttons">
+				    <%= submit_tag("New Outfit") %>
+				  </div>
+
+				<% end %>
+
+    </div>
+
 </div>
 
-<div>
-	<p>Looking cool, right? Click to generate your own now:</p>
-</div>
-<%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
-  	  
-	<%= render(:partial => "form", :locals => {:f => f}) %>
 
-  <div class="form-buttons">
-    <%= submit_tag("New Outfit") %>
-  </div>
-
-<% end %>

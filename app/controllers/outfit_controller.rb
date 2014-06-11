@@ -14,25 +14,27 @@ class OutfitController < ApplicationController
     #@last_outfit = Outfit.last
     @last_outfits = Outfit.last(5).reverse
 
-    # if no outfits exist, create one so it's displayed at homepage
-    if !Outfit.exists?(1) 
-      first = Outfit.new()
-      first.shirt = "http://www.bonobos.com/bright-blue-gingham-spread-collar-dress-shirt-for-men"
-      first.blazer = "http://www.bonobos.com/indigo-blue-italian-linen-herringbone-blazer-for-men"
-      first.tie = "http://www.bonobos.com/americano-necktie-in-seafoam-foulard"
-      first.pocket_square ="http://www.bonobos.com/cotton-blue-gingham-pocket-square-for-men"
-      first.belt = "http://www.bonobos.com/blue-silk-foulard-belts-for-men"
-      first.pants = "http://www.bonobos.com/austin-asphalt-grey-travel-jeans-for-men"
-      first.bag = "http://www.bonobos.com/billykirk-schoolboy-satchel-tan"
-      first.socks = "http://www.bonobos.com/spots-and-zig-zags-corgi-dress-socks-for-men"
-      first.shoes = "http://www.bonobos.com/navy-del-toro-prince-albert-slipper-for-men"
+    # if no outfits exist, create one so it's displayed at homepage - switched off for best load time
+    #if !Outfit.exists?(1) 
+    #  first = Outfit.new()
+    #  first.shirt = "http://www.bonobos.com/bright-blue-gingham-spread-collar-dress-shirt-for-men"
+    #  first.blazer = "http://www.bonobos.com/indigo-blue-italian-linen-herringbone-blazer-for-men"
+    #  first.tie = "http://www.bonobos.com/americano-necktie-in-seafoam-foulard"
+    #  first.pocket_square ="http://www.bonobos.com/cotton-blue-gingham-pocket-square-for-men"
+    #  first.belt = "http://www.bonobos.com/blue-silk-foulard-belts-for-men"
+    #  first.pants = "http://www.bonobos.com/austin-asphalt-grey-travel-jeans-for-men"
+    #  first.bag = "http://www.bonobos.com/billykirk-schoolboy-satchel-tan"
+    #  first.socks = "http://www.bonobos.com/spots-and-zig-zags-corgi-dress-socks-for-men"
+    #  first.shoes = "http://www.bonobos.com/navy-del-toro-prince-albert-slipper-for-men"
 
-      first.save
-    end
+    #  first.save
+    #end
   end
 
   def home
+  end
 
+  def onepage
   end
 
   def create
@@ -55,6 +57,7 @@ class OutfitController < ApplicationController
   	# populate place holders
   	# show total price
   	# load sharing scripts with preset images
+    
 
     #load JSON and process
     populate_arrays

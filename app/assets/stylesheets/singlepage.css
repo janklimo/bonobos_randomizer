@@ -1,0 +1,228 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+/* Defining each section background and styles 
+	* --------------------------------------- */
+body {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+
+h2 {
+	font-size: 27px;
+	text-align: center;
+	margin: 0px 10px 10px 10px;
+}
+
+h3 {
+	font-size: 20x;
+	font-style: italic;
+	text-align: center;
+	line-height: 2.1em;
+	margin-top: 40px;
+	margin-bottom: 5px;
+}
+
+hr.style-one {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    margin: 20px 10px;
+}
+
+#home-rectangle {
+	color: #fff;
+	width: 45%;
+	padding: 40px 0px 35px 0px;
+	background: rgba(0,0,0,.7);
+	position:    absolute;
+  top:         90px;
+  left:        50%;    /* move the left edge to the center … */
+  margin-left: -22.5%; /* … and move it to the left half the box’ width. */
+}
+
+.header_logo {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.button-outfits {
+	height: 2.75rem;
+	width: 200px;
+	color: #fff;
+	padding: .15rem 2rem 0;
+	background: #2D81E5;
+  border-radius: 3px;
+	font-size: 14px;
+	cursor: pointer;
+	position:    absolute;
+  bottom:         5%;
+  left:        50%;    /* move the left edge to the center … */
+  margin-left: -100px; 
+  border: none;
+	
+}
+
+.button-outfits:hover {
+	background: #1E5699;
+	color: #fff;
+}
+
+.button-about {
+	height: 2.75rem;
+	width: 200px;
+	color: #fff;
+	padding: .15rem 2rem 0;
+	background: #6fd161;
+  border-radius: 3px;
+	font-size: 14px;
+	cursor: pointer;
+	position:    absolute;
+  bottom:         5%;
+  right:        5%;    /* a bit away from the right edge */
+  border: none;
+	
+}
+
+.button-about:hover {
+	background: #539c48;
+	color: #fff;
+}
+
+.button-outfit {
+	height: 2.75rem;
+	width: 200px;
+	color: #fff;
+	padding: .15rem 2rem 0;
+	background: #fe6731;
+  border-radius: 3px;
+	font-size: 14px;
+	cursor: pointer;
+	position:    absolute;
+  bottom:         5%;
+  left:        50%;    /* move the left edge to the center … */
+  margin-left: -100px; 
+  border: none;
+	
+}
+
+.button-outfit:hover {
+	background: #cf5428;
+	color: #fff;
+}
+
+.item {
+	float: left; 
+	position: relative;
+	margin-top: 30px;
+	margin-right: 20px;
+
+	display: block; 
+}
+
+.item:first-child {
+	margin-left: 80px;
+}
+.item:hover .overlay {
+	opacity:0.5;
+  margin:0;  
+}
+
+.overlay {
+	position: absolute; /* absolute position (so we can position it where we want)*/  
+  bottom: 0; /* position will be on bottom */  
+  left: 0;  
+  width: 100%;  
+  /* styling below */  
+  background-color:black;  
+  font-size:15px;  
+  color:white;  
+  opacity:0; /* transparency */  
+  filter: alpha(opacity=0); /* IE transparency */ 
+  text-align: center;
+  font-weight: bold;
+}
+
+#section3 {
+	background-image: url('bright_squares.png');
+}
+
+#section3 #header {
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 35px;
+}
+
+.about-image {
+	width: 200px;
+}
+
+.item_type {
+	display: block;
+	height: 15px;
+	padding-top: 15px;
+	color: #453c3b;
+}
+
+.item_name {
+	display: block;
+	height: 15px;
+	margin: 10px 0;
+	padding: 10px 0;
+	color: #453c3b;
+}
+
+#wrapper {
+	 width: 980px; 
+	 margin-left: auto; 
+	 margin-right: auto;
+}
+
+.ribbon {
+	width: 100%;
+	height: 10px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+
+#section2 .ribbon {
+	background: #2D81E5;	
+}
+
+#section3 .ribbon
+{
+	background: #6fd161;
+}
+
+#section-view .ribbon
+{
+	background: #fe6731;
+}
+
+#section-view-more .ribbon
+{
+	background: #fe6731;
+}
+
+#wrapper {
+	 width: 980px; 
+	 margin-left: auto; 
+	 margin-right: auto;
+}
+
+.overlay-link {
+	font-size:15px;  
+  color:white;  
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}

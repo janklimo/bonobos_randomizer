@@ -1,21 +1,30 @@
-<h1>Bonobos Outfit Randomizer</h1>
-<p>A place where you can easily put together your own unique Bonobos outfits and share them with friends.</p>
-
-<%= render(:partial => "view_outfit", :locals => {:outfit => @outfit, :more_links => true}) %>
-
-<% if !@further_images.nil? %>	
-
-  <div style="width:100%;text-align: center;">
-  	<div id="slider">
-      <% @further_images.each do |link| %>
-				<div>
-					<img src="<%= link %>" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; height: 400px; ">
-				</div>
-			<% end %>
+<div id="fullpage">
+  <div class="section" id="section-view">
+    <div class="ribbon">
     </div>
+
+    <h2 class="item_type">&nbsp;</h2>
+    <h3 class="item_name">&nbsp;</h3> 
+    <%= render(:partial => "view_outfit", :locals => {:outfit => @outfit, :more_links => true}) %>
   </div>
 
-<% end %>
+  <% if !@further_images.nil? %>  
+    <div class="section" id="section-view-more">
+      <div class="ribbon">
+      </div>
+
+      <% @further_images.each do |link| %>
+        <div class="slide">
+            <img src="<%= link %>" style="display: block; margin: 9% auto; height: 400px; ">
+        </div>
+      <% end %>
+    
+      <button class="button-outfit" onclick="$.fn.fullpage.moveTo(1, 0);">Back to Outfit</button>
+
+    </div>
+  <% end %>
+</div>
+
 
 <p>Looking cool, right? Easily build your own! Start by choosing a setting:</p>
 

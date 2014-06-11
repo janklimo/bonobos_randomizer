@@ -11,3 +11,5 @@ This is a simple Ruby on Rails app designed to
 
 1.  optimize speed and UI (AJAX, JSON parsing, DB saving)
 2.  make it an outfit designer by letting the user change one item while keeping the rest
+3.  let users log in with Facebook and Twitter, so they can save their old designs
+4. 	let users comment on existing outfits
