@@ -9,6 +9,16 @@
     <%= render(:partial => "view_outfit", :locals => {:outfit => @outfit, :more_links => true}) %>
 
     <button class="button-home-tiny" onclick="window.location.href = '/';" title="Back Home"></button>
+
+    <%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
+      
+      <%= render(:partial => "form", :locals => {:f => f}) %>
+
+      <div class="form-buttons">
+        <%= submit_tag(" ", :class => "button-shuffle") %>
+      </div>
+
+    <% end %>
   
     <div id="social-wrapper">
       <div class="fb-share-button" data-href="<%= request.original_url %>" data-width="30" data-type="box_count">
@@ -18,6 +28,8 @@
     </div>
 
   </div>
+
+  
 
   <% if !@further_images.nil? %>  
     <div class="section" id="section-view-more">
@@ -39,15 +51,4 @@
 </div>
 
 
-<p>Looking cool, right? Easily build your own! Start by choosing a setting:</p>
-
-
-	<%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
-  	  
-		<%= render(:partial => "form", :locals => {:f => f}) %>
-
-    <div class="form-buttons">
-      <%= submit_tag("New Outfit") %>
-    </div>
-
-  <% end %>
+	

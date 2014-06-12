@@ -149,7 +149,7 @@ hr.style-one {
 	font-size: 14px;
 	cursor: pointer;
 	position:    absolute;
-  bottom:         5%;
+  bottom:         30px;
   left:        3%;    /* move the left edge to the center … */
   border: none;
   background-image: url('home-128.png');
@@ -353,4 +353,31 @@ hr.style-one {
   border-radius: 3px;
   border: 1px solid #2D81E5;
   padding: 8px;
+}
+
+.button-shuffle {
+	height: 50px;
+	width: 50px;
+	color: #fff;
+	padding: .15rem 2rem 0;
+	background: #fe6731;
+  border-radius: 3px;
+	font-size: 14px;
+	cursor: pointer;
+	position:    absolute;
+  bottom:         90px;
+  left:        3%;    /* move the left edge to the center … */
+  border: none;
+  background-image: url('shuffle-icon.png');
+  background-repeat: no-repeat;
+	background-position: 19px 10px;
+	
+}
+
+.button-shuffle:hover {
+	color: #fff;
+	background: #cf5428;
+	background-image: url('shuffle-icon.png');
+  background-repeat: no-repeat;
+	background-position: 19px 10px;
 }
