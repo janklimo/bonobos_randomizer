@@ -198,11 +198,11 @@ hr.style-one {
   font-weight: bold;
 }
 
-#section3 {
+#section-about {
 	background-image: url('bright_squares.png');
 }
 
-#section3 #header {
+#section-about #header {
 	text-align: center;
 	padding-top: 60px;
 	padding-bottom: 35px;
@@ -247,7 +247,16 @@ hr.style-one {
 	background: #2D81E5;	
 }
 
-#section3 .ribbon
+#section3 .ribbon {
+	background: #b659f2;	
+}
+
+#section3 {
+	background-size: cover;
+	background-image: url('section3_bg.jpg');
+}
+
+#section-about .ribbon
 {
 	background: #6fd161;
 }
@@ -294,4 +303,51 @@ hr.style-one {
 	color: #fe6731;
 	font-weight: bold;
 	text-decoration: none;
+}
+
+#action-rectangle {
+	color: #fff;
+	width: 45%;
+	height: 50%;
+	background: rgba(255,255,255,.85);
+	padding: 12px;
+	position:    absolute;
+  top:         90px;
+  left:        50%;    /* move the left edge to the center … */
+  margin-left: -22.5%; /* … and move it to the left half the box’ width. */
+}
+
+#action-rectangle #about-first {
+	padding-top: 35px;
+}
+
+#action-rectangle #about-second {
+	margin-bottom: 30px;
+}
+
+.button-action {
+	height: 2.75rem;
+	width: 200px;
+	color: #fff;
+	padding: .15rem 2rem 0;
+	background: #fe6731;
+  border-radius: 3px;
+  display: block;
+	font-size: 14px;
+	cursor: pointer;
+	position: relative;
+  margin: 10px auto;
+  border: none;
+	
+}
+
+.button-action:hover {
+	background: #cf5428;
+	color: #fff;
+}
+
+#social-wrapper {
+	position:    absolute;
+  top:         90px;
+  right:        5%;   
 }

@@ -8,7 +8,7 @@
     	</div>
 
 			<button class="button-outfits" onclick="$.fn.fullpage.moveSectionDown();">Latest Outfits</button>
-			<button class="button-about" onclick="$.fn.fullpage.moveTo(3, 0);">About Me</button>
+			<button class="button-about" onclick="$.fn.fullpage.moveTo(4, 0);">About Me</button>
 
     </div>
     
@@ -28,8 +28,31 @@
 
     </div>
 
+    <div class="section" id="section3">
+    	<div class="ribbon">
+    	</div>
 
-		<div class="section" id="section3">
+    	<div id="action-rectangle">
+    		<h2 id="about-first">Ready to create your own?</h2>
+    		<h3 id="about-second">Hit the button to generate a new outfit.<br />
+    		Browse through all of the product images. <br />
+    		Share it with friends - help them out with birthday and Christmas gift ideas :)
+    		</h3>
+
+    		<%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
+	  	  <%= render(:partial => "form", :locals => {:f => f}) %>
+
+				<div class="form-buttons">
+				  <%= submit_tag("Let's go!", :class => "button-action") %>
+				</div>
+
+			<% end %>
+    	</div>
+
+    </div>
+
+
+		<div class="section" id="section-about">
     		<div class="ribbon">
     		</div>
 
@@ -47,16 +70,6 @@
     		I'm excited to add value in any field where Bonobos can benefit from my experience in fashion and e-commerce. <br />
     		<a id="about-link" href="mailto:jan.klimo@gmail.com?subject=Hello from Bonobos" target="_blank">Let's talk!</a>
     		</h3>
-  
-
-				<%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
-	  	  	<%= render(:partial => "form", :locals => {:f => f}) %>
-
-				  <div class="form-buttons">
-				    <%= submit_tag("New Outfit") %>
-				  </div>
-
-				<% end %>
 
     </div>
 

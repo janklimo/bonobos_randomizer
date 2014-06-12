@@ -5,9 +5,15 @@
 
     <h2 class="item_type">&nbsp;</h2>
     <h3 class="item_name">&nbsp;</h3> 
+
     <%= render(:partial => "view_outfit", :locals => {:outfit => @outfit, :more_links => true}) %>
 
-    <button class="button-home-tiny" onclick="window.location.href = '/';"></button>
+    <button class="button-home-tiny" onclick="window.location.href = '/';" title="Back Home"></button>
+  
+    <div id="social-wrapper">
+      <div class="fb-share-button" data-href="http://localhost:3000/outfit/view/114" data-width="30" data-type="box_count"></div>
+    </div>
+
   </div>
 
   <% if !@further_images.nil? %>  
@@ -26,6 +32,7 @@
 
     </div>
   <% end %>
+
 </div>
 
 
