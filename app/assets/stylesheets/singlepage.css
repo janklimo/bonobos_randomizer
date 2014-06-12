@@ -117,6 +117,55 @@ hr.style-one {
 	color: #fff;
 }
 
+.button-home {
+	height: 2.75rem;
+	width: 200px;
+	color: #fff;
+	padding: .15rem 2rem 0;
+	background: #b659f2;
+  border-radius: 3px;
+	font-size: 14px;
+	cursor: pointer;
+	position:    absolute;
+  bottom:         5%;
+  left:        5%;    /* move the left edge to the center … */
+  border: none;
+	
+}
+
+.button-home:hover {
+	color: #fff;
+	background: #8d45bc url('home-128.png') no-repeat;
+	background-position: 20px 10px;
+}
+
+.button-home-tiny {
+	height: 2.75rem;
+	width: 50px;
+	color: #fff;
+	padding: .15rem 2rem 0;
+	background: #b659f2;
+  border-radius: 3px;
+	font-size: 14px;
+	cursor: pointer;
+	position:    absolute;
+  bottom:         5%;
+  left:        3%;    /* move the left edge to the center … */
+  border: none;
+  background-image: url('home-128.png');
+  background-repeat: no-repeat;
+	background-position: 22px 12px;
+	
+}
+
+.button-home-tiny:hover {
+	color: #fff;
+	background: #8d45bc;
+	background-image: url('home-128.png');
+  background-repeat: no-repeat;
+	background-position: 22px 12px;
+}
+
 .item {
 	float: left; 
 	position: relative;
@@ -160,7 +209,7 @@ hr.style-one {
 }
 
 .about-image {
-	width: 200px;
+	width: 150px;
 }
 
 .item_type {
@@ -225,4 +274,24 @@ hr.style-one {
   text-align: center;
   font-weight: bold;
   text-decoration: none;
+}
+
+#about-first {
+	font-size: 23px;
+	padding-top: 15px;
+	color: #453c3b;
+}
+
+#about-second {
+	font-size: 17px;
+	padding-top: 10px;
+	margin-top: 20px;
+	color: #453c3b;
+	font-weight: normal;
+}
+
+#about-link {
+	color: #fe6731;
+	font-weight: bold;
+	text-decoration: none;
 }
