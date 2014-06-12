@@ -347,7 +347,10 @@ hr.style-one {
 }
 
 #social-wrapper {
-	position:    absolute;
-  top:         90px;
-  right:        5%;   
+	position: absolute;
+  top: 114px;
+  right: 3%;   
+  border-radius: 3px;
+  border: 1px solid #2D81E5;
+  padding: 8px;
 }
