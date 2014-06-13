@@ -381,3 +381,35 @@ hr.style-one {
   background-repeat: no-repeat;
 	background-position: 19px 10px;
 }
+
+.form-buttons:hover + div {
+	opacity:0.9; 
+}
+
+.label-shuffle {
+	font-size: 14px;
+	position: absolute;
+	font-weight: bold;
+	height: 50px;
+	width: 50px;
+	opacity:0; 
+	color: #cf5428;
+	bottom: 72px;
+	left: 9%;
+}
+
+.label-home {
+	font-size: 14px;
+	position: absolute;
+	font-weight: bold;
+	height: 50px;
+	width: 50px;
+	opacity:0; 
+	color: #b659f2;
+	bottom: 11px;
+	left: 9%;
+}
+
+.button-home-tiny:hover + div {
+	opacity:0.9; 
+}

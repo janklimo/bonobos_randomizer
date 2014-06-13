@@ -9,6 +9,7 @@
     <%= render(:partial => "view_outfit", :locals => {:outfit => @outfit, :more_links => true}) %>
 
     <button class="button-home-tiny" onclick="window.location.href = '/';" title="Back Home"></button>
+    <div class="label-home">Home</div>
 
     <%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
       
@@ -17,8 +18,12 @@
       <div class="form-buttons">
         <%= submit_tag(" ", :class => "button-shuffle") %>
       </div>
+      
+      <div class="label-shuffle">Shuffle</div>
 
     <% end %>
+
+
   
     <div id="social-wrapper">
       <div class="fb-share-button" data-href="<%= request.original_url %>" data-width="30" data-type="box_count">
