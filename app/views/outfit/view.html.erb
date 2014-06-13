@@ -9,7 +9,7 @@
     <%= render(:partial => "view_outfit", :locals => {:outfit => @outfit, :more_links => true}) %>
 
     <button class="button-home-tiny" onclick="window.location.href = '/';" title="Back Home"></button>
-    <div class="label-home">Shuffle</div>
+    <div class="label-home">Home</div>
 
     <%= form_for(:outfit, :url => {:action => 'create'}) do |f| %>
       
